@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Subscribe Form Manual</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/idea.css" type="text/css" media="all">
+  <script type="text/javascript" src="js/jquery.min.js" ></script>
+  <script type="text/javascript" src="js/sForm.js"></script>
+  <script src="js/highlight.js"></script>
+  <script src="js/html5.js"></script>
+  <script src="js/html-xml.js"></script>
+  <script src="js/css.js"></script>
+  <script src="js/javascript.js"></script>
+  <script>
+    hljs.tabReplace = '    ';
+    hljs.initHighlightingOnLoad();
+  </script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  	<script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+  </head>
+
+  <body>
+<div id="main">
+<div class="inside"> 
+    <!-- header -->
+    <header id="header">
+    <div class="inside">
+        <h1>Subscribe Form manual</h1>
+      </div>
+  </header>
+    <section id="content">
+    <article>
+    <!-- Getting started begin -->
+    <article class="pad">
+    <h2>Subscribe Form Sample</h2>
+    <div class="inner">
+        <div class="list-pad">
+        <form id="form1">
+            <fieldset>
+            <label class="name">
+                <input type="text" value="Enter Name:">
+                <span class="error">*This is not a valid name.</span></label>
+            <br>
+            <label class="email">
+                <input type="email" value="Enter Email:">
+                <span class="error">*This is not a valid email address.</span></label>
+            <br class="clear">
+            <div class="btns"><a href="#" class="button" data-type="submit">Submit</a></div>
+          </fieldset>
+          </form>
+      </div>
+      </div>
+  </article>
+    <!-- Getting started end -->
+    <h2 class="pad">Description</h2>
+    <div class="inner"> The HTML structure inside the form is flexible, the only condition is that inputs should be placed inside the <strong>label</strong> tags that have class corresponding to their type.<br>
+    <p class="pad">There are following classes/types by default:</p>
+    <div class="list-pad pad">
+        <ul>
+        <li><strong>name</strong> &ndash; the User's Name. Validation: digits are disallowed, not less than 2 symbols;</li>
+        <li><strong>email</strong> &ndash; the User's Email;</li>
+      </ul>
+        <strong>The Code:</strong>
+        <div class="code">
+        <pre><code>
+&lt;label class="name"&gt;<br>
+&nbsp; &lt;input type="text" value="Enter Name:"&gt;<br>
+&lt;/label&gt;<br>
+&lt;label class="email"&gt;<br>
+&nbsp;  &lt;input type="email" value="Enter Email:"&gt;<br>
+&lt;/label&gt;<br>
+					</code></pre>
+      </div>
+      </div>
+    <p class="pad">Also <strong>label</strong> tag mentioned above can contain nested <em><strong>span</strong></em> elements with class <strong>error</strong>, 
+        which include the error message in case the data in the field is specified incorrectly.</p>
+    <div class="list-pad"> <strong>The Code:</strong>
+        <div class="code">
+        <pre><code>
+&lt;label class="name"&gt;<br>
+&nbsp;  &lt;input type="text" value="Enter Name:"&gt;<br>
+&nbsp;  &lt;span class="error"&gt;*This is not a valid name.&lt;/span&gt;
+&lt;/label&gt;<br>
+&lt;label class="email"&gt;<br>
+&nbsp;  &lt;input type="email" value="Enter Email:"&gt;<br>
+&nbsp;  &lt;span class="error"&gt;*This is not a valid email address.&lt;/span&gt;
+					</code></pre>
+      </div>
+      </div>
+    <h2 class="pad1">Script Initialization</h2>
+    <div class="inner">
+        <p class="pad">To activate the subscribe form you need to include subscribe form script in the <strong>&lt;head&gt;</strong> section of HTML file and copy <strong>"bat"</strong> folder to your website root folder. The <strong>"bat"</strong> folder should contain 1 file: <strong>MailHandler-sub.php</strong></p>
+        <div class="code">
+        <pre><code>&lt;script type="text/javascript" src="js/jquery.min.js(jquery-1.8.2)"&gt;&lt;/script&gt;<br>
+&lt;script type="text/javascript" src="js/sForm.js"&gt;&lt;/script&gt;</code></pre>
+      </div>
+        <p class="pad">After this you should initialize your subscription form on the $(window).load() : event at the end of sForm.js file</p>
+        <div class="code">
+        <pre><code>
+&nbsp;  $(window).load(function(){<br>
+&nbsp;	&nbsp;  $('#form1').sForm({<br>
+&nbsp;	&nbsp;  &nbsp; ownerEmail:'#',<br>
+&nbsp;	&nbsp;  &nbsp; sitename:'sitename.link'<br>
+&nbsp;	&nbsp;    })<br>
+&nbsp;  })<br>
+					</code></pre>
+      </div>
+        <p class="pad">Use the following parameters for initialization:</p>
+        <div class="list-pad">
+        <ul>
+            <li><strong>ownerEmail</strong> &ndash; the Email address the data will be sent to;</li>
+            <li><strong>sitename</strong> &ndash; website address which maintains subscription form.</li>
+          </ul>
+      </div>
+        <p class="pad">In case of successful subscription website owner and website visitor get two separate successful subscription confirmation emails. Website owner target email is grabbed from sForm.js file and website visitor email is an email specified during subscription.</p>
+      </div>
+    </article>
+    </section>
+  </div>
+  </div>
+</body>
+</html>
