@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "776099307855",
+    "project_id": "streamingpostdemo",
+    "storage_bucket": "streamingpostdemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776099307855:android:8af40c22ed83702a97e53a",
+        "android_client_info": {
+          "package_name": "com.alkalab.ourworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776099307855-d5kggcg58cuhhpsf1jdsu0503pcnatt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgbnbt0OtTqUxi3-xIItmEC_kPgVk8ODY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776099307855-d5kggcg58cuhhpsf1jdsu0503pcnatt2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776099307855-k5easr9rivh7vnl88bq98qp689748pg3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nouraldeen.streamingapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

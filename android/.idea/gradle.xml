@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/agora_chat_sdk-1.2.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/agora_rtc_engine-5.3.1/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/agora_rtm-1.5.9/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-4.14.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-4.16.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-2.24.2/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-14.7.10/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-11.6.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-8.2.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_localization-0.1.13/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.15/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_share-2.0.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/google_mobile_ads-2.4.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.7+4/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.1.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/permission_handler_android-9.0.2+1/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.2.0/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_android-6.0.38/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_android-2.4.9/android" />
+            <option value="$USER_HOME$/Documents/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter_android-2.10.4/android" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
