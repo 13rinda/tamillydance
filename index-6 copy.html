@@ -108,36 +108,48 @@
               </div> 
               <div class="col-lg-6 col-12">
               	<h2>CONTACT</h2>
-                <form id="contact-form" class="contact-form" action="./Email.php" method="POST" style="border: solid 1px #000; padding: 10px;">
-                  <div class="success">Contact form submitted!<strong> We will be in touch soon.</strong> </div>
-                  <fieldset>
-                      <label for="first_name">First Name:
-                          <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
-                          <span class="error">*This is not a valid name.</span>
-                          <span class="empty">*This field is required.</span>
-                      </label><br>    
-                      <label for="last_name">Last Name:
-                          <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
-                          <span class="error">*This is not a valid name.</span>
-                          <span class="empty">*This field is required.</span>
+                <form id="contact-form" class="contact-form"  style="border: solid 1px #000; padding: 10px;">
+                      <div class="success">Contact form submitted!<strong> We will be in touch soon.</strong> </div>
+                      <fieldset>
+                          <label class=" First Name">
+                           <input type="text" id="first name" value="First Name" required>						
+                           <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span>						
+                      </label><br>	
+                      <label class="Last name">
+                        <input type="text" id="last name" value="Last Name" required>						
+                        <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span>						
+                   </label><br>
+                      <label class="email">						
+                           <input type="email" id="email" value="E-mail" required>						
+                           <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span>						
                       </label><br>
-                      <label for="email">Email:
-                          <input type="email" id="email" name="email" placeholder="E-mail" required>
-                          <span class="error">*This is not a valid email address.</span>
-                          <span class="empty">*This field is required.</span>
-                      </label><br>
-                      <label for="message">Message:
-                          <select name="language" id="Drop" style="width: 100%; color: #8c8b8b; border-radius: 6px; border: 1px solid #ddd; padding: 5px 8px;">
-                              <option value="Belly Dance">Hire a Belly dance</option>
-                              <option value="Corporate">Corporate</option>
-                              <option value="Classes">Classes</option>
-                              <option value="Others">Others</option>
-                          </select>
+                     
+                      <label class="message">						
+                        <select name="language" id="Drop" style="width: 100%;
+                        color: #8c8b8b;
+                        border-radius: 6px;
+                        border: 1px solid #ddd;
+                        padding: 5px 8px;">
+                          <option value="Belly Dance">Hire a Belly dance</option>
+                          <option value="Corporate">Corporate</option>
+                          <option value="Classes">Classes</option>
+                          <option value="Others">Others</option>
+                        </select>			
+                   					
                       </label>
-                  </fieldset>
-                  <button type="button" id="submitBtn">Submit</button>
-              </form>
-              
+
+                    
+                    
+                    </fieldset>
+                    <form action="?" method="POST">
+                      <div id="html_element"></div>
+                      <br>
+                    
+                      <div class="pull-right55">
+                          <a href="#" class="btn" data-type="reset">clear</a>
+                          <a href="#" class="btn" data-type="submit">send message</a>
+                      </div>
+                  </form>
               </div>
             </div>  
           </div>
@@ -174,32 +186,7 @@
     </footer>
 </div>
 
-<script>
-  document.getElementById('submitBtn').addEventListener('click', function() {
-      // Get form data
-      const formData = new FormData(document.getElementById('contact-form'));
-      
-      // Send form data to PHP file
-      fetch('./Email.php', {
-          method: 'POST',
-          body: formData
-      })
-      .then(response => {
-          if (response.ok) {
-              return response.text();
-          }
-          throw new Error('Network response was not ok.');
-      })
-      .then(data => {
-          // Do something with the response from the PHP file
-          console.log(data);
-      })
-      .catch(error => {
-          console.error('There was a problem with your fetch operation:', error);
-      });
-  });
-</script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   var onloadCallback = function() {
     grecaptcha.render('html_element', {
       'sitekey' : '6Ld5NN0pAAAAALx4ZuuRTwZDWK7hBzeTNpcNgCJC'
@@ -207,8 +194,8 @@
   };
 </script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-async defer> -->
-<!-- </script> -->
+async defer>
+</script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 
 </body>
