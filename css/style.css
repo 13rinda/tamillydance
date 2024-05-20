@@ -1380,6 +1380,7 @@ footer .span12 > div > span a:hover {
   }
   /* navbar */.select-menu {
     display: block !important;
+    height: 28px;
   }
   .navbar_ .nav {
     display: none !important;
