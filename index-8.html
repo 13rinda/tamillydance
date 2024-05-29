@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Contacts</title>
+  <title>Contact</title>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +70,9 @@
                             <li><a href="index-1.html">About</a></li>
                             <li><a href="index-3.html">Corporate</a></li>
                             <li><a href="index-5.html">Gallery</a></li>
-                            <li class="active"><a href="index-6.html">Contact</a></li>
+                            <li><a href="index-6.html">Hire A Belly Dancer</a></li>
+                             <li class="active"><a href="index-6.html">Contact</a></li>
+
                           </ul>
                         </div>
                       </div>
@@ -85,73 +87,16 @@
             <div class="col-lg-6 col-12">
               <h2>how to find us</h2>
               <div class="map">
-                <iframe
-                  src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                
               </div>
-              Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce
-              feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci
-              ac sem. Duis ultricies pharetra magna. Donec accumsan malesuada orci. Donec sit amet eros. Lorem ipsum
-              dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut
-              tellus dolor, dapibus eget, elementumve cursus eleifend, elit.
+              NEW TEXG HERE
               <address class="address">
-                <strong class="text-info">8901 Marmora Road, Glasgow, D04 89GR.</strong>
-                <span>Freephone:</span>+1 800 559 6580<br>
-                <span>Telephone:</span>+1 800 603 6035<br>
-                <span>FAX:</span>+1 800 889 9898<br>
-                E-mail: <a href="#" class="link">mail@demolink.org</a>
+                <strong class="text-info">Cambridge, United Kingdom</strong>
+                <span>Telephone:</span>+1 555-5555<br>
+                E-mail: <a href="#" class="link">tamillydance@gmail.com</a>
               </address>
             </div>
-            <div class="col-lg-6 col-12">
-              <h2>CONTACT</h2>
-              <form id="contact-form" class="contact-form" style="border: solid 1px #000; padding: 10px;">
-                <div class="success">Contact form submitted!<strong> We will be in touch soon.</strong> </div>
-                <fieldset>
-                  <label class=" First Name">
-                    <input type="text" id="first name" name="first_name" value="First Name" required>
-                    <span class="error">*This is not a valid name.</span> <span class="empty">*This field is
-                      required.</span>
-                  </label><br>
-
-                  <label class="Last name">
-                    <input type="text" id="last name" name="last_name" value="Last Name" required>
-                    <span class="error">*This is not a valid name.</span> <span class="empty">*This field is
-                      required.</span>
-                  </label><br>
-
-                  <label class="email">
-                    <input type="email" id="email" name="email" value="E-mail" required>
-                    <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is
-                      required.</span>
-                  </label><br>
-
-                  <label class="message">
-                    <select name="language" id="Drop" style="width: 100%;
-                        color: #8c8b8b;
-                        border-radius: 6px;
-                        border: 1px solid #ddd;
-                        padding: 5px 8px;">
-                      <option value="Belly Dance">Hire a Belly dance</option>
-                      <option value="Corporate">Corporate</option>
-                      <option value="Classes">Classes</option>
-                      <option value="Others">Others</option>
-                    </select>
-                  </label>
-
-                  <label class="contact message">
-                    <textarea name="message" style="height: 110px; margin-bottom: 10px;" placeholder="Message"></textarea>
-                  </label><br>
-                </fieldset>
-                <!-- <form action="?" method="POST"> -->
-                  <div id="html_element"></div>
-                  <br>
-
-                  <div class="pull-right55">
-                    <a href="#" class="btn" data-type="reset">clear</a>
-                    <button type="submit" class="btn">Send Message</button>
-                    <!-- <a href="#" class="btn" type="submit">send message</a> -->
-                  </div>
-                </form>
-            </div>
+       
           </div>
         </div>
       </div>
@@ -162,57 +107,6 @@
   <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
-  <script>
-    var onloadCallback = function () {
-      grecaptcha.render('html_element', {
-        'sitekey': '6LdKlOEpAAAAABqvNecmq2deHNMVKIv68VBxX6Qi'
-      });
-    };
-
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz7WyRR_nKLzy2SApH9kpKiUxkFoObM8vOtzMzMpxWTE_eSv0uQN4dd2_XJRr2wMAXbNg/exec';
-
-
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-
-      // Check if reCAPTCHA is verified
-      const recaptchaResponse = grecaptcha.getResponse();
-      if (!recaptchaResponse) {
-          Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Please complete the reCAPTCHA!'
-          });
-          return;
-      }
-
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: 'Your message has been sent successfully.',
-                confirmButtonText: 'OK',
-                allowOutsideClick: false,
-                allowEscapeKey: false
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    location.reload(); // Reload the page
-                }
-            });
-        })
-        .catch(error => {
-          Swal.fire({
-              icon: 'error',
-              title: 'Error!',
-              text: 'There was a problem sending your message.',
-              confirmButtonText: 'OK',
-              allowOutsideClick: false,
-              allowEscapeKey: false
-          });
-        });
-    });
-  </script>
+  
 </body>
 </html>
