@@ -1088,12 +1088,12 @@ header h1.brand a strong {
 /*------ footer ------- */
 footer {
   position: relative;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 30px;
   color: #635e5a;
 }
 .footer-border {
-  margin: 0;
+  margin: 0 auto;
   padding-bottom: 39px;
   text-align: center;
   border-bottom: #312e2c 1px solid;
@@ -1153,7 +1153,7 @@ footer {
 }
 footer .span12 > div {
   text-align: center;
-  padding-top: 110px;
+  padding-top: 20px;
   text-transform: uppercase;
 }
 footer a.footer-logo {
@@ -1164,6 +1164,7 @@ footer a.footer-logo {
   line-height: 140px;
   font-weight: 100;
   letter-spacing: -11px;
+  text-decoration: none;
 }
 footer .span12 > div > span {
   display: block;
@@ -1374,9 +1375,10 @@ footer .span12 > div > span a:hover {
   }
   .footer-border {
     display: none;
+    padding-top: 40px
   }
   footer .span12 > div {
-    padding-top: 0px;
+    padding-top: 10px;
   }
   /* navbar */.select-menu {
     display: block !important;
