@@ -317,6 +317,17 @@ header h1.brand a strong {
   display: inline-block;
   margin: 0;
 }
+.nav-collapse_collapse .nav li a {
+  color: #2b2826;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-shadow: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+}
 .nav-collapse_ .nav > li > a {
   display: inline-block;
   position: relative;
@@ -354,7 +365,7 @@ header h1.brand a strong {
 .nav-collapse_ .nav > li > a:hover,
 .nav-collapse_ .nav > li.active > a,
 .nav-collapse_ .nav > li.active > a:hover {
-  background: #c81818;
+  background: #a28e6d;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -422,7 +433,186 @@ header h1.brand a strong {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
+
+.nav-collapse {
+  margin: 0;
+  line-height: 0 !important;
+  font-size: 0;
+  text-align: center;
+}
+.nav-collapse .nav {
+  float: none;
+  display: inline-block;
+}
+.nav-collapse .nav li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  zoom: 1;
+  z-index: 99;
+}
+.nav-collapse .nav > li {
+  float: left;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+.nav-collapse .nav > li:first-child {
+  margin-left: 0;
+}
+.nav-collapse .nav:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.nav-collapse .nav li a {
+  color: #2b2826;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-shadow: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+}
+.nav-collapse .nav li a {
+  color: #2b2826;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-shadow: none;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+}
+.nav-collapse .nav > li > a {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav-collapse .nav > li.sub-menu > a:before {
+  content: " ";
+  position: absolute;
+  background: url(../img/menu-marker.gif) right 0 no-repeat;
+  width: 5px;
+  height: 3px;
+  left: 50%;
+  bottom: 5px;
+  margin-left: -2px;
+}
+.nav-collapse .nav > li.sfHover.sub-menu > a:before,
+.nav-collapse .nav > li.sub-menu.active > a:before,
+.nav-collapse .nav > li.sub-menu:hover > a:before {
+  background-position: 0 0;
+}
+.nav-collapse .nav > li.sfHover > a,
+.nav-collapse .nav > li.sfHover > a:hover,
+.nav-collapse .nav > li > a:hover,
+.nav-collapse .nav > li.active > a,
+.nav-collapse .nav > li.active > a:hover {
+  background: #a28e6d;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #ffffff;
+  text-shadow: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav-collapse .nav li ul {
+  position: absolute;
+  display: none;
+  width: 116px;
+  list-style: none;
+  zoom: 1;
+  z-index: 9;
+  margin: 0;
+  padding: 20px 10px 20px 10px;
+  background: #a28e6d;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.nav-collapse .nav > li > ul {
+  left: 0px;
+  top: 63px;
+}
+.nav-collapse .nav ul li {
+  line-height: 17px;
+  display: block;
+  text-align: left;
+  position: relative;
+  margin-top: 1px;
+}
+.nav-collapse .nav ul li:first-child {
+  margin-top: 0;
+}
+.nav-collapse .nav ul li a {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #ffffff;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 6px 5px 6px 5px;
+  display: block;
+}
+.nav-collapse .nav > li > ul li > a:hover,
+.nav-collapse .nav > li > ul li.sfHover > a {
+  text-decoration: none;
+  color: #a28e6d;
+  background: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
 /* slider */
+
+
 .slider {
   position: relative;
   z-index: 1;
@@ -1104,7 +1294,7 @@ footer {
   font-size: 0;
 }
 .footer-menu {
-  margin: 0;
+
   float: none;
   overflow: hidden;
   display: inline-block;
