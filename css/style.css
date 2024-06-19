@@ -1306,6 +1306,7 @@ footer {
   zoom: 1;
   z-index: 99;
 }
+.select-menu{font-size: 15px;}
 .footer-menu li {
   float: left;
   display: inline-block;
