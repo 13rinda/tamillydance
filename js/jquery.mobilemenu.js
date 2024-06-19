@@ -9,74 +9,72 @@
  * Documentation
  *   http://github.com/mambows/mobilemenu
  */
-(function($){
-$.fn.mobileMenu = function(options) {
-  
- var defaults = {
-   defaultText: 'Select',
-   className: 'select-menu',
-   subMenuClass: 'sub-menu',
-   subMenuDash: '&ndash;'
-  },
-  settings = $.extend( defaults, options ),
-  el = $(this);
- 
- this.each(function(){
-  // ad class to submenu list
-  el.find('ul').addClass(settings.subMenuClass);
+(function($) {
+  $.fn.mobileMenu = function(options) {
+      var defaults = {
+          defaultText: 'Select',
+          className: 'select-menu',
+          subMenuClass: 'sub-menu',
+          subMenuDash: '-'
+      };
 
-  // Create base menu
-  $('<select />',{
-   'class' : settings.className
-  }).insertAfter( el );
+      var settings = $.extend(defaults, options);
 
-  // Create default option
-  $('<option />', {
-   "value"  : '#',
-   "text"  : settings.defaultText
-  }).appendTo( '.' + settings.className );
+      return this.each(function() {
+          var $el = $(this);
 
-  // Create select option from menu
-  el.find('a,.separator').each(function(){
-   var $this  = $(this),
-     optText = $this.text(),
-     optSub = $this.parents( '.' + settings.subMenuClass ),
-     len   = optSub.length,
-     dash;
-   
-   // if menu has sub menu
-   if( $this.parents('ul').hasClass( settings.subMenuClass ) ) {
-    dash = Array( len+1 ).join( settings.subMenuDash );
-    optText = dash + optText;
-   }
-   if($this.is('span')){
-    // Now build menu and append it
-   $('<optgroup />', {
-    "label" : optText,
-   }).appendTo( '.' + settings.className );
-   }
-   else{
-    // Now build menu and append it
-   $('<option />', {
-    "value" : this.href,
-    "html" : optText,
-    "selected" : (this.href == window.location.href)
-   }).appendTo( '.' + settings.className );
-   }
+          // Ensure the plugin is applied only once
+          if ($el.data('mobileMenu')) {
+              return; // Exit if already initialized
+          }
+          $el.data('mobileMenu', true);
 
-  }); // End el.find('a').each
+          // Add class to submenu lists
+          $el.find('ul').addClass(settings.subMenuClass);
 
-  // Change event on select element
-  $('.' + settings.className).change(function(){
-   var locations = $(this).val();
-   if( locations !== '#' ) {
-    window.location.href = $(this).val();
-   }
-  });
-  $('.select-menu').show();
+          // Create the base select menu
+          var $select = $('<select />', {
+              'class': settings.className
+          }).insertAfter($el);
 
- }); // End this.each
- 
- return this;
-};
+          // Create default option
+          $('<option />', {
+              "value": '#',
+              "text": settings.defaultText
+          }).appendTo($select);
+
+          // Create select options from menu items
+          $el.find('a, .separator').each(function() {
+              var $this = $(this),
+                  optText = $this.text(),
+                  optSub = $this.parents('.' + settings.subMenuClass),
+                  len = optSub.length,
+                  dash = '';
+
+              // Add dashes to denote hierarchy
+              if (len > 0) {
+                  dash = Array(len + 1).join(settings.subMenuDash);
+              }
+
+              // Append options to select menu
+              $('<option />', {
+                  "value": this.href,
+                  "html": dash + optText,
+                  "selected": (this.href == window.location.href)
+              }).appendTo($select);
+          });
+
+          // Change event handler for the select menu
+          $select.change(function() {
+              var locations = $(this).val();
+              if (locations !== '#') {
+                  window.location.href = locations;
+              }
+          });
+
+          // Display the select menu
+          $select.show();
+
+      }); // End this.each
+  };
 })(jQuery);
